@@ -15,21 +15,11 @@
 
       .right-header
         %a.right-header__button
-          = link_to "Edit", edit_group_path(@group) 
+          = link_to "Edit", edit_group_path(@group) ,class: 'right-header__button'
 
     .messages
       = render @messages
-
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            date: 2019/10/10
-        .low-message
-          .low-message__content
-            メッセージ
-            
+      
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
