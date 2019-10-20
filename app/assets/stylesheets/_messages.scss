@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 .side-bar{
   color: #ffffff;
   width: 300px;
@@ -11,6 +15,7 @@
     height: 100px;
     line-height: 100px;
     padding: 0 20px;
+    display: flex;
     &__name {
       display: inline-block;
       font-size: 16px;
@@ -19,6 +24,7 @@
     &__lists {
       display: inline-block;
       float: right;
+      margin-left: auto;
       .list {
         display: inline-block;
       }
@@ -33,6 +39,8 @@
 .groups {
   background-color: #2f3e51;
   height: calc(100vh - 100px);
+  overflow: scroll;
+  width: 300px;
   padding: 0 20px;
   .group {
     padding: 20px 0 40px;
@@ -56,6 +64,7 @@
     height: 100px;
     padding: 0 40px;
     border-bottom: 1px solid #eeeeee;
+    
     .left-header {
       &__title {
         color: #333;
@@ -82,6 +91,10 @@
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
+      &__button{
+        text-decoration: none;
+        color:#38AEF0;
+      }
     }
   }
 
@@ -89,7 +102,8 @@
   .messages {
     background-color: #FAFAFA;
     padding: 46px 40px 0;
-    height: calc(100% - 100px - 90px);
+    height: calc(100vh - 100px - 90px);
+    overflow: scroll;
     .message {
       .upper-message {
         display: flex;
